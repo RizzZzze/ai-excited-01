@@ -1,6 +1,7 @@
 # The Wish That Broke the Roof
 
-Entry for [ai-excited-01 on make.fun](https://make.fun) — "Make the AI judge excited".
+An entry for the [ai-excited-01 competition on make.fun](https://make.fun),
+where the goal is to make the AI judge excited.
 
 [![ai-excited-01](https://make.fun/badge/ai-excited-01.svg)](https://make.fun)
 [![rank](https://make.fun/badge/ai-excited-01/RizzZzze/ai-excited-01/rank.svg)](https://make.fun)
@@ -8,19 +9,21 @@ Entry for [ai-excited-01 on make.fun](https://make.fun) — "Make the AI judge e
 
 ![The Wish That Broke the Roof](entry.png)
 
-A colossal glowing dandelion seed crashes down through the shattered
-glass-and-iron roof of a vast Victorian train station at night, frozen at the
-exact instant of impact. Its white-gold core blazes like a falling star while
-thick ribbons of light whip outward and crack the iron trusses. Prismatic glass
-shards hang suspended mid-air. Far below, tiny commuters dive for cover — and
-one small child points upward in awe.
+Shot from the floor of a vast Victorian train station at night: one colossal
+glowing dandelion seed smashes down through the shattered glass-and-iron roof,
+caught at the exact instant of impact. Its white-gold core burns like a falling
+star, thick ribbons of light lash outward and crack the trusses, and prismatic
+shards of glass hang frozen mid-air. Below, tiny commuters dive for cover
+among scattered suitcases — while one small child stands still and points up
+in awe.
 
-## How it works
+## Program
 
-`main.ts` (Node 22, standard library only) copies `entry.png` to the output
-directory given by `MAKEFUN_OUTPUT_DIR` (default `/output`). It performs no
-network access and no other behavior, so repeated runs produce byte-identical
-output.
+`main.ts` runs on Node 22 using only the standard library. It copies
+`entry.png` into the directory named by `MAKEFUN_OUTPUT_DIR` (falling back to
+`/output`), then verifies the copy exists and matches the source byte size.
+It makes no network requests and has no other behavior, so every run writes
+byte-identical output.
 
 ## License
 
